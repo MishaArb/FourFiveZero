@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:four_five_zero/core/themes/app_theme.dart';
+import 'package:four_five_zero/presentation/pages/create_edit_reminder_screen.dart';
 import 'core/constants/app_text.dart';
 import 'presentation/pages/home_screen.dart';
 
@@ -15,9 +16,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: AppText.appName,
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.darkAppTheme(),
-      darkTheme: AppTheme.darkAppTheme(),
-      home: const HomeScreen()
+      theme: AppTheme.darkAppTheme(context),
+      darkTheme: AppTheme.darkAppTheme(context),
+      home:
+      CreateEditReminderScreen()
+      //const HomeScreen()
     );
   }
 }

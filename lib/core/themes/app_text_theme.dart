@@ -4,9 +4,14 @@ import '../constants/app_colors.dart';
 import '../constants/app_font.dart';
 
 class AppTextTheme {
-  static darkTextTheme() => const TextTheme(
+  static darkTheme() => const TextTheme(
         titleLarge: TextStyle(
           fontSize: 35,
+          fontFamily: AppFont.montserratBold700,
+          color: AppColors.whiteFF,
+        ),
+        titleMedium: TextStyle(
+          fontSize: 24,
           fontFamily: AppFont.montserratBold700,
           color: AppColors.whiteFF,
         ),

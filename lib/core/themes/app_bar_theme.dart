@@ -3,7 +3,7 @@ import '../constants/app_colors.dart';
 
 
 class AppThemeAppBar {
-  static dartAppBarTheme() => const AppBarTheme(
+  static darkTheme() => const AppBarTheme(
         backgroundColor: AppColors.darkGrayBlue29,
       );
 }
