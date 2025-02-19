@@ -8,4 +8,14 @@ class AppText {
   static const chooseMessenger = 'Оберіть мессенджер';
   static const attachImage = 'Прикріпити зображення';
   static const save = 'Зберегти';
+  static const pickMessenger = 'Виберіть месенджер';
+  static const whatsApp  = 'WhatsApp';
+  static const signal = 'Signal';
+  static const telegram = 'Telegram';
+  static const repeat = 'Повторювати';
+  static const hourly = 'Щогодини';
+  static const daily = 'Щодня';
+  static const weekly = 'Щотижня';
+  static const time = 'Час';
+
 }

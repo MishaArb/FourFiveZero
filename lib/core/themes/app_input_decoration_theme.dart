@@ -5,8 +5,10 @@ import '../constants/app_property.dart';
 
 class AppInputDecorationTheme {
   static darkTheme(BuildContext ctx) => InputDecorationTheme(
-        hintStyle: Theme.of(ctx).textTheme.titleSmall?.copyWith(
-            color: AppColors.darkGrayBlue4E),
+        hintStyle: Theme.of(ctx)
+            .textTheme
+            .titleSmall
+            ?.copyWith(color: AppColors.darkGrayBlue4E),
         enabledBorder: OutlineInputBorder(
           borderRadius: AppProperty.allBorderRadiusMedium,
           borderSide: const BorderSide(
@@ -21,5 +23,9 @@ class AppInputDecorationTheme {
             color: AppColors.darkGrayBlue4E,
           ),
         ),
+        labelStyle: Theme.of(ctx)
+            .textTheme
+            .titleSmall
+            ?.copyWith(color: AppColors.darkGrayBlue4E),
       );
 }

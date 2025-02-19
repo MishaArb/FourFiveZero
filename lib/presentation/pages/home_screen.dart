@@ -58,7 +58,8 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Image.asset(width: 30, height: 30, AppImages.logoWhatsApp),
+                    Image.asset(
+                        width: 30, height: 30, AppImages.logoMessengers[0]),
                     Transform.scale(
                       scale: 0.6,
                       child: Switch(
@@ -94,18 +95,18 @@ class HomeScreen extends StatelessWidget {
                         print('Вибрано: $result');
                       },
                       itemBuilder: (BuildContext context) => [
-                        const PopupMenuItem<String>(
-                          value: 'Delete',
+                        PopupMenuItem<String>(
+                          value: AppText.delete,
                           child: Text(
                             AppText.delete,
-                            style: TextStyle(color: Colors.white),
+                            style: Theme.of(ctx).textTheme.bodySmall,
                           ),
                         ),
-                        const PopupMenuItem<String>(
-                          value: 'Edit',
+                        PopupMenuItem<String>(
+                          value: AppText.edit,
                           child: Text(
                             AppText.edit,
-                            style: TextStyle(color: Colors.white),
+                            style: Theme.of(ctx).textTheme.bodySmall,
                           ),
                         ),
                       ],
