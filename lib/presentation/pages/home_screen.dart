@@ -1,9 +1,12 @@
+import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:four_five_zero/core/constants/app_text.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_images.dart';
 import '../../core/constants/app_property.dart';
 
+@RoutePage()
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -31,7 +34,8 @@ class HomeScreen extends StatelessWidget {
           color: AppColors.whiteFF,
           size: 24.0,
         ),
-        onPressed: () {},
+        onPressed: () =>
+            AutoRouter.of(context).pushNamed('/createEditReminderScreen'),
       ),
       body: ListView.builder(
         itemCount: 50,

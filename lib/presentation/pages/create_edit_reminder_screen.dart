@@ -1,3 +1,5 @@
+import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:four_five_zero/core/constants/app_colors.dart';
 import 'package:four_five_zero/core/constants/app_property.dart';
@@ -5,6 +7,7 @@ import 'package:four_five_zero/core/constants/app_text.dart';
 import '../../core/constants/app_images.dart';
 import '../../core/themes/app_theme.dart';
 
+@RoutePage()
 class CreateEditReminderScreen extends StatelessWidget {
   const CreateEditReminderScreen({super.key});
 
@@ -13,7 +16,7 @@ class CreateEditReminderScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () => AutoRouter.of(context).back(),
           icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.white,
@@ -86,13 +89,11 @@ class CreateEditReminderScreen extends StatelessWidget {
     void Function()? onTap,
   }) {
     return TextField(
-      onTap:  isInputText ? null : onTap,
+      onTap: isInputText ? null : onTap,
       maxLines: maxLine,
       readOnly: isInputText ? false : true,
-      style: Theme.of(ctx)
-          .textTheme.titleSmall?.copyWith(
-            color: isInputText ? AppColors.whiteFF
-                               : AppColors.blueF3,
+      style: Theme.of(ctx).textTheme.titleSmall?.copyWith(
+            color: isInputText ? AppColors.whiteFF : AppColors.blueF3,
           ),
       decoration: InputDecoration(
         labelText: label,
@@ -164,16 +165,17 @@ class CreateEditReminderScreen extends StatelessWidget {
   Expanded _buildTimeWidget(BuildContext context) {
     return Expanded(
       child: _buildTextField(
-        isInputText: false,
-        ctx: context,
-        icon: Icons.access_time,
-        label: AppText.time,
-        value: '10:25',
+          isInputText: false,
+          ctx: context,
+          icon: Icons.access_time,
+          label: AppText.time,
+          value: '10:25',
           onTap: () async {
             await _selectedTime24Hour(context);
           }),
     );
   }
+
   Future<TimeOfDay?> _selectedTime24Hour(BuildContext cxt) async {
     return await showTimePicker(
       context: cxt,
@@ -189,7 +191,6 @@ class CreateEditReminderScreen extends StatelessWidget {
       },
     );
   }
-
 
 // ========================= Attache Messenger =====================//
   Row _buildSelectedMessenger(BuildContext context) {
