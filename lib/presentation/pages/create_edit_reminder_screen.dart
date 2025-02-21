@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:four_five_zero/core/constants/app_colors.dart';
 import 'package:four_five_zero/core/constants/app_property.dart';
 import 'package:four_five_zero/core/constants/app_text.dart';
+import 'package:four_five_zero/injection_container.dart';
 import '../../core/constants/app_images.dart';
+import '../../core/route/router.dart';
 import '../../core/themes/app_theme.dart';
 
 @RoutePage()
@@ -16,7 +18,7 @@ class CreateEditReminderScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () => AutoRouter.of(context).back(),
+          onPressed: () => getIt<AppRouter>().back(),
           icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.white,
