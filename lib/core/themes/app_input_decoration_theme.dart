@@ -9,6 +9,14 @@ class AppInputDecorationTheme {
             .textTheme
             .titleSmall
             ?.copyWith(color: AppColors.darkGrayBlue4E),
+    errorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8),
+      borderSide: const BorderSide(color: AppColors.red00),
+    ),
+    focusedErrorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8),
+      borderSide: const BorderSide(color: AppColors.red00),
+    ),
         enabledBorder: OutlineInputBorder(
           borderRadius: AppProperty.allBorderRadiusMedium,
           borderSide: const BorderSide(

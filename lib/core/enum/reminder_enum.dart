@@ -1,0 +1,1 @@
+enum ReminderActionType {newReminder, editReminder}
